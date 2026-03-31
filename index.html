@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Briana</title>
+
+    <!-- Elegant Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+     <!-- Background Soft Music -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="audio/STOP MASTER.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="playMusicBtn">Play Birthday Music</button>
+
+    <div class="container">
+        <h1>Happy Birthday, Briana!!! <i class="fas fa-birthday-cake"></i></h1>
+        <p>
+            Wishing you a beautiful year filled with joy, peace, growth,  
+            and moments that make your heart smile.  
+            You are truly appreciated.  
+            <br><br>
+            Enjoy your special day — you deserve all the brightness it brings. 
+        </p>
+
+         <!-- PHOTO COLLAGE SECTION -->
+        <div class="collage">
+            <img src="img/img7.JPG" alt="Briana Photo 1">
+            <img src="img/img6.jpg" alt="Briana Photo 2">
+            <img src="img/img3.jpg" alt="Briana Photo 3">
+            <img src="img/IMG_1685.JPG" alt="Briana Photo 4">
+        </div>
+    </div>
+
+     <!-- Confetti Generator -->
+    <script>
+        for (let i = 0; i < 25; i++) {
+            let confetti = document.createElement("div");
+            confetti.classList.add("confetti");
+            confetti.style.left = Math.random() * 100 + "vw";
+            confetti.style.backgroundColor =
+                ["#d6b0ff", "#b485ff", "#e6ccff", "#caa5ff"][Math.floor(Math.random() * 4)];
+            confetti.style.animationDelay = Math.random() * 3 + "s";
+            document.body.appendChild(confetti);
+        }
+
+
+           const music = document.getElementById("bgMusic");
+                const btn = document.getElementById("playMusicBtn");
+
+                btn.addEventListener("click", () => {
+                    music.play();
+                    btn.classList.add("hide");
+            });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+ body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #f3e8ff, #ffffff);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 650px;
+    margin: 60px auto;
+    text-align: center;
+    background: #f0f0f0;
+    padding: 35px 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.12);
+    animation: fadeIn 1.6s ease-out;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #6a1b9a;
+    margin-bottom: 20px;
+}
+
+h1 i {
+    color: #ff4081;
+    animation: bounce 1s infinite;
+}
+
+p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Lora', sans-serif;
+    margin-bottom: 30px;
+}
+
+#playMusicBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #6a1b9a;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    animation: fadeIn 1s ease-in-out;
+    z-index: 9999;
+}
+
+#playMusicBtn.hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .8s;
+}
+
+
+.collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.collage img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    height: 200px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    animation: fadeIn 2s ease-out;
+}
+
+.confetti {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    background-color: #d6b0ff;
+    top: -20px;
+    animation: fall 4s linear infinite;
+    border-radius: 3px;
+    opacity: 0.85;
+}
+
+
+ /* Soft fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fall {
+    to { transform: translateY(110vh) rotate(360deg); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+ /* Responsive */
+@media (max-width: 600px) {
+    h1 { 
+        font-size: 2.5rem; 
+    }
+
+    p { 
+        font-size: 0.9rem; 
+    }
+
+    .collage img { 
+        height: 250px; 
+        object-fit: cover;
+    }
+}
+
+
